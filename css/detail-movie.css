@@ -371,9 +371,14 @@ nav{
     .more-info-other-social-links ul{
         justify-content: space-around;
     }
+    
     #footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+    
+    #footer a{
+        padding: 2px 0px;
     }
 }

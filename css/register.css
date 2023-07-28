@@ -208,6 +208,7 @@ form .form-terms :where(label, a) {
 
     .form-wrapper {
         padding: 20px 70px;
+        margin-top: 30px;
     }
     
     .form-wrapper form {

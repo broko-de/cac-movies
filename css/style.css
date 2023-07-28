@@ -458,4 +458,8 @@ div.wrapper {
         align-items: center;
         justify-content: center;
     }
+
+    #footer a{
+        padding: 2px 0px;
+    }
 }
