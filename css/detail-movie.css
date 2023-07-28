@@ -1,0 +1,379 @@
+:root{
+    --bg-color:#2a2a2a;
+    --primary-color:#b1dd00;
+    --secondary-color:#143954;
+    --third-color:#62828f;
+    --bg-input-color:rgba(255,255,255,0.1);
+}
+
+/* Estilos base para el contenedor con flexibilidad */
+.contenedor-flex {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos hijos se envuelvan cuando no haya suficiente espacio horizontal */
+  }
+  
+  /* Estilos para los elementos hijos dentro del contenedor flex */
+  .hijo-flex {
+    flex: 1; /* Distribuye el espacio disponible de manera equitativa entre los elementos hijos */
+    min-width: 200px; /* Establece el ancho mínimo para que los elementos no se hagan demasiado pequeños */
+    padding: 10px; /* Agrega un espacio entre los elementos hijos */
+  }
+  
+  /* Estilos de medios para ajustar la disposición cuando la pantalla se achique */
+  @media (max-width: 768px) {
+    .hijo-flex {
+      flex-basis: 100%; /* Establece el ancho base al 100% para que los elementos ocupen una sola columna */
+    }
+  }
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--bg-color);
+    font-family: 'Nunito', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color:#FFF;
+    font-size: 2vw;
+}
+
+.header{
+    background-color: transparent;
+    color:#FFF; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+.scrolled{
+    background-color: var(--third-color);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;   
+    padding: 0px 50px;
+}
+
+#logo{
+    font-weight: bold;
+}
+
+#logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav-links{
+    display: flex;
+    gap:30px;
+    list-style: none;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color:#FFF;
+}
+
+.nav-links a:hover{
+    color: var(--primary-color) ;
+}
+
+.btn-cac{
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 10px;
+    color:#FFF;
+}
+
+.btn-cac:hover{
+    color:var(--secondary-color)!important;
+    border: 2px solid var(--secondary-color);
+}
+
+#banner-movie{
+    background-image: url('../img/mario-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    box-shadow:inset 0 0 0 2000px rgba(84, 84, 84, 0.7);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movie-detail{
+    display: flex;
+    justify-content: center;
+    padding: 80px 0px;
+    flex-wrap: wrap;
+}
+
+.movie-detail-poster{
+    flex: 1; 
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+.movie-detail-poster img{
+    border-radius: 20px;
+}
+
+.movie-detail-info{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 40px;
+}
+
+.movie-detail-info-title h2 span{
+    font-weight: 100;
+    color: #d8d8d8;
+}
+
+.movie-detail-info-title p{
+    color: white;
+}
+
+.movie-detail-info-overview{
+    margin: 10px 0px;
+    color: white;
+}
+
+.movie-detail-info-credits{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin: 10px 0px;
+    flex-wrap: wrap;
+}
+
+.movie-detail-info-credits-profile p:first-child{
+    font-weight: bold;
+}
+
+#more-info{
+    margin: 50px 0px;
+}
+
+.more-info-movie{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.more-info-other{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.more-info-movie-trailer{    
+    flex: 1;
+    flex-basis: 60%;
+}
+
+.more-info-movie-trailer-container{
+    position: relative;
+    width: 100%;
+}
+
+
+.more-info-movie-trailer h3{
+    color:white;
+    padding-bottom: 10px;
+}
+
+.more-info-other{
+    width: 30%;
+    flex: 2;
+}
+
+.more-info-other-social-links ul{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0px;
+    list-style: none;
+}
+
+.more-info-other-social-links ul li a{
+    color: white;
+    font-size: 2em;
+}
+
+.more-info-other-text table{
+    color: white;
+    width: 100%;
+}
+
+.more-info-other-text table tr td{
+    padding: 5px 0px;
+}
+
+.more-info-other-text table tr td:nth-child(1){
+    width: 60%;
+}
+
+.more-info-other-text table tr td:nth-child(2){
+    width: 40%;
+}
+
+#footer {
+    align-items: center;
+    background-color: #62828f;
+    display: flex;
+    height: 100px;
+    width: 100%;
+}
+
+#footer a {
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    padding-left: 30px;
+    text-decoration: none;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    color:#b1dd00;
+}
+
+/* Estilos para hacer que el contenedor sea responsive */
+.more-info-movie-trailer-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Establece el aspect ratio 16:9 */
+  }
+  
+  /* Estilos para ajustar el iframe dentro del contenedor */
+  .more-info-movie-trailer-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+/* PANTALLAS GRANDES */
+@media screen and (max-width:1920px) {
+    
+}
+
+/* TABLETS */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    h2{
+        font-size: 3vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 400px;
+    }
+    #search{
+        height: 200px;
+    }
+    .container{
+        max-width: 720px;
+    }
+    .card-banner{
+        padding: 0px 75px;
+    }
+    .movies-grid{
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+    .d-form{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .d-iframe{
+        width: 100%;
+    }
+
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+}
+
+/* CELULARES */
+@media screen and (max-width: 767px) {
+    h2{
+        font-size: 3vw;
+    }
+    .login-text{
+        display: none;
+    }
+    .logo-text{
+        display: none;
+    }
+    #banner{
+        height: 300px;
+    }
+   
+    .container{
+        max-width: 420px;
+    }
+    
+    .movie-detail{
+        gap: 30px 0px;
+    }
+
+    .movie-detail-info-title h2{
+        font-size: 6vw;
+    }
+    
+    .movie-detail-info-credits-profile{
+        width: 50%;        
+        margin: 10px 0px;
+    }
+
+    .more-info-movie{
+        padding: 20px;
+    }
+
+    .more-info-movie-trailer{
+        flex-basis: 100%;
+    }
+
+    .more-info-movie-trailer h3{
+        font-size: 3vh;
+    }
+    .more-info-other{
+        flex-basis: 100%;
+    }
+
+    .more-info-other-social-links ul{
+        justify-content: space-around;
+    }
+    #footer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
