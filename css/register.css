@@ -67,7 +67,7 @@ nav a img {
 form .form-control {
     height: 50px;
     position: relative;
-    margin-bottom: 16px;
+    margin-top: 15px;
 }
 
 .form-control input {
@@ -164,6 +164,7 @@ form button:hover{
 form .form-terms {
     display: flex;
     justify-content: space-between;
+    margin-top: 15px;
 }
 
 form .terms {
@@ -191,6 +192,14 @@ form .form-terms :where(label, a) {
 
 .form-wrapper small a {
     color: #0071eb;
+}
+
+.error{
+    color: red;
+    margin-bottom: 5px;
+}
+.form-control input.error, .form-select.error{
+    border: 2px solid red; 
 }
 
 @media (max-width: 740px) {
